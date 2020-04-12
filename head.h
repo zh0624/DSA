@@ -46,14 +46,14 @@ void pai(T *list, int k, int m) {
 		}
 	}
 }
+int* ct= new int[10];
 
-int Factorial(int num) {
-	int Fac = 1;
-	while (num != 1) {
-		Fac *= num;
-		--num;
-	}
-	return Fac;
+int Fibonacci(int n) {
+	ct[n]++;
+	if (n == 0 || n == 1)
+		return 1;
+	else
+		return Fibonacci(n - 1) + Fibonacci(n - 2);
 }
 
 #endif
